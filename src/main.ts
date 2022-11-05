@@ -1,16 +1,11 @@
 import { createApp } from 'vue';
-import { createRouter, createWebHashHistory } from 'vue-router';
+import { createRouter } from 'vue-router';
 import { App } from './App';
-import { Bar } from './views/Bar';
-import { Foo } from './views/Foo';
-
-const routes = [
-  { path: '/', component: Foo },
-  { path: '/bar', component: Bar },
-]
+import { routes } from './config/routes';
+import { history } from './shared/history';
 
 const router = createRouter({
-  history: createWebHashHistory(),
+  history,
   routes,
 })
 
