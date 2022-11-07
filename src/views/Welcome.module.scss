@@ -1,15 +1,24 @@
 .wrapper{
   height: 100vh;
+  display: flex;
   flex-direction: column;
+  background-image: linear-gradient(to bottom, #8a4b45 0%, #bb8189 100%);
   > header{
     flex-shrink: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding-top: 66px;
+    color: #d4d4ee;
+    > .dragonFriut {
+      width: 96px;
+    }
   }
   > main{
     flex-grow: 1;
+    display: flex;
+    flex-direction: column;
   }
 
   > footer{

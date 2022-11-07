@@ -7,11 +7,10 @@ export const Welcome = defineComponent({
   setup: (props, context) => {
     return () => <div class={s.wrapper}>
       <header>
-        <img src={logo} alt="" />
+        <img src={logo} class={s.dragonFriut} alt="" />
         <h1>账簿</h1>
       </header>
       <main><RouterView></RouterView></main>
-      <footer>buttons</footer>
     </div>
       
   }
