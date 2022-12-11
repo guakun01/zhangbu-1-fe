@@ -17,4 +17,4 @@ export const First = defineComponent({
       </div>
     </div>
   }
-})
+});

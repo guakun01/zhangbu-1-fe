@@ -4,6 +4,7 @@
   flex-direction: column;
   margin-bottom: var(--welcome-nav-height);
   background-image: linear-gradient(to bottom, var(--welcome-bg-start) 0%, var(--welcome-bg-end) 100%);
+  overflow: scroll;
   > header{
     flex-shrink: 0;
     display: flex;
