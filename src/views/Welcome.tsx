@@ -1,14 +1,15 @@
 import { defineComponent, Transition, VNode } from 'vue';
 import { RouteLocationNormalizedLoaded, RouterView } from 'vue-router';
 import s from './Welcome.module.scss';
-import logo from '../assets/icons/dragon-fruit.svg';
 
 export const Welcome = defineComponent({
   setup: (props, context) => {
     type Y = { Component: VNode, route: RouteLocationNormalizedLoaded };
     return () => <div class={s.wrapper}>
       <header>
-        <img src={logo} class={s.dragonFriut} alt="" />
+        <svg>
+          <use xlinkHref='#dragon-fruit'></use>
+        </svg>
         <h1>账簿</h1>
       </header>
       <main>
