@@ -44,10 +44,8 @@ if (svg) {
 // listen dom ready event
 document.addEventListener('DOMContentLoaded', () => {
     if (document.body.firstChild) {
-        console.log('first-child' + document.body.firstChild)
         document.body.insertBefore(div, document.body.firstChild)
     } else {
-        console.log('body' + document.body)
         document.body.appendChild(div)
     }
 })`
