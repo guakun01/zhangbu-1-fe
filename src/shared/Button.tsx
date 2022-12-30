@@ -8,7 +8,7 @@ interface Props {
 export const Button = defineComponent<Props>({
     setup: (props, context) => {
         return () => (
-            <button class={s.button}>hi</button>
+            <button class={s.button}>{context.slots.default?.()}</button>
         )
     }
 })
