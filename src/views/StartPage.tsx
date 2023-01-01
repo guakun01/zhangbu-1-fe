@@ -8,7 +8,7 @@ import s from './StartPage.module.scss';
 import {Overlay} from "../shared/Overlay";
 export const StartPage = defineComponent({
     setup: (props, context) => {
-        const refOverlayVisible = ref(false);
+        const refOverlayVisible = ref(true);
 
         const onClickMenu = () => {
             console.log('x');
@@ -27,7 +27,8 @@ export const StartPage = defineComponent({
                     <Button class={s.button}>记一笔</Button>
                 </div>
                 <FloatButton iconName='add' />
-                {refOverlayVisible.value && <Overlay />}
+                {refOverlayVisible.value
+                    && <Overlay onClose={() => {refOverlayVisible.value = false}} />}
             </div>
         )
     }
