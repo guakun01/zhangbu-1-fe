@@ -14,24 +14,27 @@ export const Tabs = defineComponent({
 
     return () => {
 
-      let childList = context.slots.default?.();
-      if (!childList) return () => null;
-      for (let i = 0; i < childList.length; i++) {
-        if (childList[i].type !== Tab) {
-          throw new Error('<Tabs> only accepts <Tab> as children')
+      let tabList = context.slots.default?.();
+      if (!tabList) return () => null;
+      for (let i = 0; i < tabList.length; i++) {
+        if (tabList[i].type !== Tab) {
+          throw new Error('Tabs only accepts <Tab> as children')
         }
       }
 
       return <div class={s.tabs}>
         <ol class={s.tabs_nav}>
-          {childList.map(child =>
-            <li class={child.props?.name === props.selected ? s.selected : ''}
-                // onClick={() => props.onUpdateSelected?.(child.props?.name)}
-                onClick={() => context.emit('update:selected', child.props?.name)}
+          {tabList.map(tab =>
+            <li class={tab.props?.name === props.selected ? s.selected : ''}
+                // onClick={() => props.onUpdateSelected?.(tab.props?.name)}
+                onClick={() => context.emit('update:selected', tab.props?.name)}
             >
-              {child.props?.name}
+              {tab.props?.name}
             </li>)}
         </ol>
+        <div>
+          {tabList.find(tab => tab.props?.name === props.selected)}
+        </div>
       </div>
     }
   }
