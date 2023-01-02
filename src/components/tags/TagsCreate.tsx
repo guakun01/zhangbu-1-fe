@@ -39,9 +39,10 @@ export const TagsCreate = defineComponent({
 
             <div class={s.formRow}>
               <label class={s.formLabel}>
-                <span class={s.formItem_name}>符号</span>
+                <span class={s.formItem_name}>符号 {formData.sign}</span>
                 <div class={s.formItem_value}>
-                  <EmojiSelect class={[s.formItem, s.error]}/>
+                  <EmojiSelect class={[s.formItem, s.error]}
+                               v-model={formData.sign}/>
                 </div>
                 <div class={s.formItem_errorHint}>
                   <span>必填</span>
