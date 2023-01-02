@@ -1,3 +1,30 @@
+.dateAndAmount {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  border-top: 1px solid var(--input-pad-button-border-color);
+  font-family: monospace;
+
+  .date {
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    color: var(--input-pad-date-text);
+
+    .icon {
+      width: 24px;
+      height: 24px;
+      fill: var(--input-pad-date-icon-fill);
+      margin-right: 8px;
+    }
+  }
+  .amount {
+    font-size: 20px;
+    color: var(--input-pad-amount-text);
+  }
+}
 .buttons {
   display: flex;
   flex-wrap: wrap;
