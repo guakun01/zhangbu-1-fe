@@ -3,6 +3,7 @@ import s from './TagsCreate.module.scss';
 import {MainLayout} from "../../layouts/MainLayout";
 import {Icon} from "../../shared/Icon";
 import {Button} from "../../shared/Button";
+import {EmojiSelect} from "../../shared/EmojiSelect";
 
 export const TagsCreate = defineComponent({
   props: {
@@ -40,159 +41,10 @@ export const TagsCreate = defineComponent({
               <label class={s.formLabel}>
                 <span class={s.formItem_name}>符号</span>
                 <div class={s.formItem_value}>
-                  <div class={[s.formItem, s.emojiList, s.error]}>
-                    <nav>
-                      <span class={s.selected}>表情</span>
-                      <span>手势</span>
-                      <span>职业</span>
-                      <span>衣服</span>
-                      <span>动物</span>
-                      <span>自然</span>
-                      <span>食物</span>
-                      <span>运动</span>
-                      <span>表情</span>
-                      <span>手势</span>
-                      <span>职业</span>
-                      <span>衣服</span>
-                      <span>动物</span>
-                      <span>自然</span>
-                      <span>食物</span>
-                      <span>运动</span>
-                    </nav>
-
-                    <ol>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                      <li>😊</li>
-                    </ol>
-                  </div>
-
-
+                  <EmojiSelect class={[s.formItem, s.error]}/>
+                </div>
+                <div class={s.formItem_errorHint}>
+                  <span>必填</span>
                 </div>
               </label>
             </div>
