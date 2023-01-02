@@ -1,5 +1,6 @@
 import {defineComponent, PropType} from 'vue';
 import s from './TagsPage.module.scss';
+import {RouterView} from "vue-router";
 
 export const TagsPage = defineComponent({
   props: {
@@ -9,7 +10,7 @@ export const TagsPage = defineComponent({
   },
   setup: (props, context) => {
     return () => (
-      <div class={s.wrapper}></div>
+      <RouterView />
     )
   }
 })
