@@ -1,6 +1,7 @@
 import {defineComponent, PropType} from 'vue';
 import s from './InputPad.module.scss';
 import {Icon} from "../shared/Icon";
+import {time} from "../shared/time";
 
 export const InputPad = defineComponent({
   props: {
@@ -32,7 +33,7 @@ export const InputPad = defineComponent({
       <div class={s.dateAndAmount}>
         <span class={s.date}>
           <Icon name="date" class={s.icon}/>
-          <span>2022-01-01</span>
+          <span><input type="date" value={time().format()} /></span>
         </span>
         <span class={s.amount}>123456789.01</span>
       </div>
