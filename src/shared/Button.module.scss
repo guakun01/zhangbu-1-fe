@@ -8,6 +8,6 @@ button {
     height: var(--button-height);
 
     &:hover {
-        border: 1px solid red;
+        box-shadow: 2px 3px var(--button-hover-shadow-color);
     }
 }
