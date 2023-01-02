@@ -10,8 +10,8 @@ import {ThirdAction} from "../components/welcome/ThirdAction";
 import {StartPage} from "../views/StartPage";
 import {Welcome} from "../views/Welcome";
 import {ItemsPage} from "../views/ItemsPage";
-import {ItemsCreate} from "../components/item/ItemsCreate";
-import {ItemsList} from "../components/item/ItemsList";
+import {ItemsCreate} from "../components/items/ItemsCreate";
+import {ItemsList} from "../components/items/ItemsList";
 import {TagsCreate} from "../components/tags/TagsCreate";
 import {TagsPage} from "../views/TagsPage";
 import {TagsEdit} from "../components/tags/TagsEdit";
@@ -29,7 +29,7 @@ export const routes: RouteRecordRaw[] = [
   },
   {path: '/start', component: StartPage},
   {
-    path: '/item', component: ItemsPage,
+    path: '/items', component: ItemsPage,
     children: [
       {path: '', component: ItemsList},
       {path: 'create', component: ItemsCreate},

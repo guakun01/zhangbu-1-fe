@@ -23,11 +23,11 @@ export const StartPage = defineComponent({
           default: () => <>
             <Center class={s.dragon_fruit_wrapper}><Icon name='dragon-fruit' class={s.dragon_fruit}/></Center>
             <div class={s.button_wrapper}>
-              <RouterLink to="/item/create">
+              <RouterLink to="/items/create">
                 <Button class={s.button}>记一笔</Button>
               </RouterLink>
             </div>
-            <RouterLink to="/item/create">
+            <RouterLink to="/items/create">
               <FloatButton iconName='add'/>
             </RouterLink>
             {refOverlayVisible.value
