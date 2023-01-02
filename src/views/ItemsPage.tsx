@@ -1,7 +1,7 @@
 import { defineComponent, PropType } from 'vue';
-import s from './ItemPage.module.scss';
+import s from './ItemsPage.module.scss';
 import {RouterView} from "vue-router";
-export const ItemPage = defineComponent({
+export const ItemsPage = defineComponent({
     setup: (props, context) => {
         return () => (
           <RouterView />

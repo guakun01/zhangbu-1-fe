@@ -1,11 +1,11 @@
 import {defineComponent, PropType, ref} from 'vue';
-import s from './ItemCreate.module.scss';
+import s from './ItemsCreate.module.scss';
 import {MainLayout} from "../../layouts/MainLayout";
 import {Icon} from "../../shared/Icon";
 import {Tab, Tabs} from "../../shared/Tabs";
 import {InputPad} from "../InputPad";
 
-export const ItemCreate = defineComponent({
+export const ItemsCreate = defineComponent({
   props: {
     name: {
       type: String as PropType<string>

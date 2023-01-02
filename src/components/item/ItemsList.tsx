@@ -1,6 +1,6 @@
 import { defineComponent, PropType } from 'vue';
-import s from './ItemList.module.scss';
-export const ItemList = defineComponent({
+import s from './ItemsList.module.scss';
+export const ItemsList = defineComponent({
     props: {
         name: {
             type: String as PropType<string>
