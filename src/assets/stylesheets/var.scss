@@ -27,8 +27,11 @@
     --tabs-bg: var(--navbar-bg-end);
     --tabs-text: white;
     --tabs-indicator-bg: rgba(255, 255, 255, 0.5);
-    --input-pad-button-border-color: #ddd;
     --input-pad-date-icon-fill: #4c48d9;
     --input-pad-date-text: #999;
     --input-pad-amount-text: #4c48d9;
+    --input-pad-button-border-color: #ddd;
+    --input-pad-button-bg: #fff;
+    --input-pad-importnt-button-text: #fff;
+    --input-pad-important-button-bg: var(--button-bg);
 }
