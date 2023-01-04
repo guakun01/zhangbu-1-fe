@@ -1,5 +1,5 @@
 import {defineComponent, PropType, reactive, toRaw} from 'vue';
-import s from './TagsCreate.module.scss';
+import s from './Tags.module.scss';
 import {MainLayout} from "../../layouts/MainLayout";
 import {Icon} from "../../shared/Icon";
 import {Button} from "../../shared/Button";
@@ -7,11 +7,7 @@ import {EmojiSelect} from "../../shared/EmojiSelect";
 import {FData, Rules, validate} from "../../shared/valadate";
 
 export const TagsCreate = defineComponent({
-  props: {
-    name: {
-      type: String as PropType<string>
-    }
-  },
+
   setup: (props, context) => {
     const formData = reactive({
       name: '',
