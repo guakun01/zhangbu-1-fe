@@ -5,6 +5,9 @@
     align-items: center;
     text-align: center;
     background: var(--tabs-bg);
+    position: sticky;
+    z-index: 1;
+    top: 0;
 
     > li {
       flex-grow: 1;
