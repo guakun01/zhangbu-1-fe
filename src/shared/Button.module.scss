@@ -10,4 +10,13 @@
     &:hover {
         box-shadow: 2px 3px var(--button-hover-shadow-color);
     }
+    &.normal {
+    }
+    &.important {
+    }
+    &.danger {
+        background: var(--button-bg-danger);
+        border-color: var(--button-bg-danger);
+    }
 }
+
