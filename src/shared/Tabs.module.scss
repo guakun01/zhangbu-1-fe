@@ -1,13 +1,14 @@
 .tabs {
+
   &_nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     text-align: center;
-    background: var(--tabs-bg);
     position: sticky;
     z-index: 1;
     top: 0;
+    background: var(--tabs-bg);
 
     > li {
       flex-grow: 1;
