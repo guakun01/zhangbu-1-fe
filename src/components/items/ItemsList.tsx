@@ -1,14 +1,17 @@
 import {defineComponent, reactive, ref} from 'vue';
+import s from './ItemsList.module.scss';
 import {MainLayout} from "../../layouts/MainLayout";
 import {Icon} from "../../shared/Icon";
 import {Tab, Tabs} from "../../shared/Tabs";
 import {ItemSummary} from "./ItemSummary";
 import {Time} from "../../shared/time";
+import {Overlay} from "vant";
 
 export const ItemsList = defineComponent({
 
   setup: (props, context) => {
     const refSelected = ref('本月');
+    const refOverlayVisible = ref(true);
     const time = new Time();
     const customTime = reactive({start: new Time(new Date()), end: new Time(new Date())});
     const timeList = [
@@ -31,7 +34,7 @@ export const ItemsList = defineComponent({
         {
           title: () => '火龙果记账',
           icon: () => <Icon name='menu'/>,
-          default: () => (
+          default: () => <>
             <Tabs v-model:selected={refSelected.value} classPrefix='customerTags'>
               <Tab name='本月'>
                 <ItemSummary startDate={timeList[0].start.format()} endDate={timeList[0].end.format()}/>
@@ -46,7 +49,17 @@ export const ItemsList = defineComponent({
                 <ItemSummary startDate={customTime.start.format()} endDate={customTime.end.format()}/>
               </Tab>
             </Tabs>
-          )
+            <Overlay show={refOverlayVisible.value} class={s.overlay}>
+              <div class={s.overlay_inner}>
+                <header>请选择时间</header>
+              </div>
+              <main>
+                <form action="">
+                  <div>1111</div>
+                </form>
+              </main>
+            </Overlay>
+          </>
         }
       }</MainLayout>
     )
