@@ -15,6 +15,7 @@ import {ItemsList} from "../components/items/ItemsList";
 import {TagsCreate} from "../components/tags/TagsCreate";
 import {TagsPage} from "../views/TagsPage";
 import {TagsEdit} from "../components/tags/TagsEdit";
+import {SignInPage} from "../views/SignInPage";
 
 export const routes: RouteRecordRaw[] = [
   {path: '/', redirect: '/welcome'},
@@ -43,4 +44,5 @@ export const routes: RouteRecordRaw[] = [
       {path: ':id/edit', component: TagsEdit},
     ]
   },
+  { path: '/sign_in', component: SignInPage }
 ]
