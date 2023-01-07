@@ -1,4 +1,4 @@
-import {defineComponent, onMounted, PropType, ref} from 'vue';
+import {computed, defineComponent, onMounted, PropType, reactive, ref} from 'vue';
 import s from './Charts.module.scss';
 import {FormItem} from "../../shared/Form";
 import * as echarts from 'echarts';
@@ -16,6 +16,33 @@ export const Charts = defineComponent({
   },
   setup: (props, context) => {
     const refCategory = ref('expense');
+
+    const data3 = reactive([
+      {tag: {id: 1, name: '房租', sign: '🚹'}, amount: '2,999'},
+      {tag: {id: 2, name: '餐饮', sign: '🐰'}, amount: '1,999'},
+      {tag: {id: 3, name: '交通', sign: '🚗'}, amount: '1,999'},
+      {tag: {id: 4, name: '购物', sign: '🛍'}, amount: '1,999'},
+      {tag: {id: 5, name: '娱乐', sign: '🎮'}, amount: '1,999'},
+      {tag: {id: 6, name: '医疗', sign: '🏥'}, amount: '1,999'},
+      {tag: {id: 7, name: '学习', sign: '📚'}, amount: '1,999'},
+      {tag: {id: 8, name: '其他', sign: '🤔'}, amount: '1,999'},
+    ]);
+
+    const betterData3 = computed(() => {
+      const total = data3
+        .reduce(
+          (sum, item) =>
+            sum + parseFloat(item.amount.replace(',', '')),
+          0
+        );
+      return data3.map(item => {
+        const amount = parseFloat(item.amount.replace(',', ''));
+        return {
+          ...item,
+          percentage: Math.round(amount / total * 100) + '%',
+        };
+      });
+    })
 
     const refDiv = ref<HTMLDivElement>();
     onMounted(() => {
@@ -73,6 +100,7 @@ export const Charts = defineComponent({
       myChart.setOption(options)
     })
 
+
     return () => (
       <div class={s.wrapper}>
         <FormItem
@@ -86,6 +114,23 @@ export const Charts = defineComponent({
 
         <div ref={refDiv} class={s.demo}></div>
         <div ref={refDiv2} class={s.demo2}></div>
+
+        <div class={s.demo3}>
+          {betterData3.value.map(({tag, amount, percentage}) => {
+            return <div class={s.topItem}>
+              <div class={s.sign}>{tag.sign}</div>
+              <div class={s.bar_wrapper}>
+                <div class={s.bar_text}>
+                  <span>{tag.name} - {percentage}</span>
+                  <span>￥{amount}</span>
+                </div>
+                <div class={s.bar}>
+                  <div class={s.bar_inner}></div>
+                </div>
+              </div>
+            </div>
+          })}
+        </div>
       </div>
     )
   }

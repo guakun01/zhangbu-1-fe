@@ -1,5 +1,6 @@
 :root {
   --app-name-text: #5a86bf;
+  --bar-bg: #ccc;
   --bg: white;
   --button-bg-danger: #e10505;
   --button-bg: #5061BF;
@@ -40,6 +41,7 @@
   --tabs-indicator-bg: rgba(255, 255, 255, 0.5);
   --tabs-text: white;
   --tag-bg: #efefef;
+  --text-muted: #666;
   --text: #333;
   --top-safe-area-height: 24px;
   --total-bg: #252a43;
@@ -54,7 +56,7 @@
   --welcome-nav-height: 64px;
   --welcome-text: white;
   --z-index-bottom-nav: 8;
+  --z-index-item-list-overlay: 64;
   --z-index-navbar: 32;
   --z-index-overlay: 16;
-  --z-index-item-list-overlay: 64;
 }
