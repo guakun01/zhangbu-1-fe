@@ -14,10 +14,13 @@ export const Button = defineComponent({
       type: String as PropType<'normal' | 'important' | 'danger'>,
       default: 'important',
     },
+    type: {
+      type: String as PropType<'button' | 'submit' | 'reset'>,
+    }
   },
   setup: (props, context) => {
     return () => (
-      <button class={[s.button, s[props.level]]}>{context.slots.default?.()}</button>
+      <button type={props.type} class={[s.button, s[props.level]]}>{context.slots.default?.()}</button>
     )
   }
 })
