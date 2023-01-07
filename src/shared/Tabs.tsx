@@ -9,10 +9,8 @@ export const Tabs = defineComponent({
     selected: {
       type: String as PropType<string>
     },
-    // onUpdateSelected: {
-    //   type: Function as PropType<(name: string) => void>
-    // },
   },
+  emits: ['update:selected'],
   setup: (props, context) => {
 
     return () => {
@@ -30,12 +28,12 @@ export const Tabs = defineComponent({
       return <div class={[s.tabs, cp + '_tabs']}>
         <ol class={[s.tabs_nav, cp + '_tabs_nav']}>
           {tabList.map(tab => {
-            return <li class={[
-              tab.props?.name === props.selected ? [s.selected, cp + '_selected'] : '',
-              cp + '_tabs_nav_item'
-            ]}
-              // onClick={() => props.onUpdateSelected?.(tab.props?.name)}
-                       onClick={() => context.emit('update:selected', tab.props?.name)}
+            return <li
+              class={[
+                tab.props?.name === props.selected ? [s.selected, cp + '_selected'] : '',
+                cp + '_tabs_nav_item'
+              ]}
+              onClick={() => context.emit('update:selected', tab.props?.name)}
             >
               {tab.props?.name}
             </li>;
