@@ -15,9 +15,7 @@ export const TagsCreate = defineComponent({
         title: () => '新建标签',
         icon: () => <Icon name="left" class={s.nav_icon} onClick={() => {
         }}/>,
-        default: () => <>
-          <TagsForm />
-        </>,
+        default: () => <TagsForm />,
       }}</MainLayout>
     )
   }
