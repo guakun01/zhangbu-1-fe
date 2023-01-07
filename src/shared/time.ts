@@ -86,7 +86,7 @@ export class Time {
       default:
         throw new Error('unit must be year, month, day, hour, minute, second or millisecond');
     }
-    return date;
+    return new Time(date);
   }
 }
 
