@@ -1,3 +1,10 @@
+.nav_icon {
+  width: 36px;
+  height: 36px;
+  position: relative;
+  top: 2px;
+}
+
 .mask {
   position: fixed;
   z-index: var(--z-index-overlay);
@@ -15,6 +22,7 @@
   left: 0;
   width: 16em;
   height: calc(100% - var(--top-safe-area-height));
+  color: var(--text);
 }
 .current_user {
   padding: 32px 16px;

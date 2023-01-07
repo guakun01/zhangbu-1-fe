@@ -35,6 +35,7 @@
     --overlay-mask-bg: rgba(0, 0, 0, 0.5);
     --overlay-user-bg: var(--welcome-bg-start);
     --overlay-user-text: white;
+    --text: #333;
     --tabs-bg: var(--navbar-bg-end);
     --tabs-indicator-bg: rgba(255, 255, 255, 0.5);
     --tabs-text: white;
@@ -53,4 +54,5 @@
     --welcome-text: white;
     --z-index-bottom-nav: 8;
     --z-index-overlay: 16;
+    --z-index-navbar: 32;
 }
